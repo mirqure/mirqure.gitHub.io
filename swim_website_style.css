@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+:root {
+    --scroll-height: 0%;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: var(--scroll-height, 0%);
+    background: #ee8131;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    transition: height 0.3s ease;
+}
+
+.container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container img {
+    transition: transform 0.3s;
+}
+
+.container.visible img {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    padding: 10px 50px;
+    background: #ff660000;
+}
+
+.left-container {
+    left:0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+.container img{
+    position: absolute;
+    width:40px;
+    border-radius: 50%;
+    right: -20px;
+    top:32px;
+    z-index: 10;
+}
+
+.right-container img{
+    left:-20px;
+}
+
+.text-box{
+    padding: 20px 30px;
+    background: #ffffff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #005a9c, #0077be);
+    color: rgb(0, 0, 0);
+    padding: 0px 0;
+    text-align: center;
+    position: relative;
+    height: 300px; /* Fixed height for header */
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Styles - Updated to stick to top */
+nav {
+    background-color: #ff6600;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensures nav stays on top of other content */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff9249;
+}
+
+/* Main Content Styles */
+main {
+    padding: 30px 0;
+    position: relative;
+    z-index: 1; /* Ensures main content is above the fixed video */
+    background-color: #000000a0; /* Background color to cover video */
+}
+
+h1 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ff9249;
+    margin: 20px 0 10px 0;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.toggle-btn {
+    padding: 8px 16px;
+    border: 2px solid #ff6600;
+    background-color: #ffffff;
+    color: #ff6600;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #e6f2ff;
+}
+
+.toggle-btn.active {
+    background-color: #ff6600;
+    color: white;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff6600;
+    color: rgba(255, 148, 55, 0.47);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #ff6f009f;
+    color:#ffffff;
+}
+
+tr:nth-child(odd) {
+    background-color: #ff6f0000;
+    color:#ffffff;
+}
+
+tr:hover {
+    background-color: #000000;
+}
+
+a {
+    color: white;
+    
+}
+
+/* Password Form Styles */
+.password-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.password-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.password-form button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.password-form button:hover {
+    background-color: #ff6600;
+}
+
+/* Hidden content */
+.hidden {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1; /* Ensures footer is above the fixed video */
+}
+
+/* Updated banner styles for fixed video */
+.banner {
+    position: relative; /* Change to fixed instead of relative */
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    top: 0; /* Align to top of viewport */
+    z-index: 0; /* Place behind other content */
+}
+
+.banner video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+    
+.banner-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -425%);
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensures text is on top of the video */
+}
