@@ -1,7 +1,581 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayland Swim and Dive Team</title>
+    <link rel = "stylesheet" href = "swim_website_style.css">
+    <link rel="shortcut icon" href="file:///Users/russell_wong/Downloads/wayland_w.png"/>
+
+</head>
+<script src="timeline.js"></script>
+<script src="record_toggle.js"></script>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <div class="banner">
+            <video autoplay muted loop playsinline>
+              <source src="/Users/russell_wong/Documents/swim_comp.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="banner-content">
+              <h1 style="font-size: 50px">Wayland Swim and Dive</h1>
+              <p></p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('schedule')">Schedule</a></li>
+            <li><a href="#" onclick="showPage('records')">Records</a></li>
+            <li><a href="#" onclick="showPage('athletes-login')">Athletes</a></li>
+        </ul>
+    </nav>
+    
+    <main class="">
+        <!-- ------------------------Home Page--------------------------- -->
+        <div id="home" class="timeline page hidden">
+            <div class = "container left-container">
+                <img src = "/Users/russell_wong/Downloads/circle.png">
+                <div class="text-box">
+                    <h2>2024-2025</h2>
+                    <h4>Boys:</h4>
+                    <ul>
+                        <li>Undefeated (18-0)</li>
+                        <li>DCL Championships 1st</li>
+                        <li>MIAA North Sectionals 2nd</li>
+                        <li>MIAA Division II States 1st</li>
+                    </ul>
+                    <h4>Girls:</h4>
+                    <ul>
+                        <li>DCL 5th</li>
+                        <li>MIAA North Sectionals 5th</li>
+                        <li>MIAA Division II States 7th</li>
+                    </ul>
+                </div>
+                <div class = "timeline-image">
+                    <img>
+                </div>
+            </div>
+            <div class = "container right-container">
+                <img src = "/Users/russell_wong/Downloads/circle.png">
+                <div class="text-box">
+                    <h2>2023-2024</h2>
+                    <h4>Boys:</h4>
+                    <ul>
+                        <li>DCL Championships 1st</li>
+                        <li>MIAA North Sectionals 7th</li>
+                        <li>MIAA Division II States 2nd</li>
+                    </ul>
+                    <h4>Girls:</h4>
+                    <ul>
+                        <li>Undefeated (14-0)</li>
+                        <li>DCL Championshiops 3rd</li>
+                        <li>MIAA North Sectionals 3rd</li>
+                        <li>MIAA Division II States 3rd</li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "container left-container">
+                <img src = "/Users/russell_wong/Downloads/circle.png">
+                <div class="text-box">
+                    <h2>2022-2023</h2>
+                    <p>more info add later</p>
+                    <h4>Boys:</h4>
+                    <ul>
+                        <li>DCL Championships 4th</li>
+                        <li>MIAA North Sectionals 9th</li>
+                        <li>MIAA Division II States 6th</li>
+                    </ul>
+                    <h4>Girls:</h4>
+                    <ul>
+                        <li>DCL Championshiops 1st</li>
+                        <li>MIAA North Sectionals 3rd</li>
+                        <li>MIAA Division II States 3rd</li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "container right-container">
+                <img src = "/Users/russell_wong/Downloads/circle.png">
+                <div class="text-box">
+                    <h2>2021-2022</h2>
+                    <p>more info add later</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Schedule Page -->
+        <div id="schedule" class="page hidden">
+            <h1>2024-2025 Season Schedule</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Location</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>December 8, 2024</td>
+                        <td>Pentathlon</td>
+                        <td>Wayland Community Pool</td>
+                        <td>4:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>December 17, 2024</td>
+                        <td>vs. Grafton</td>
+                        <td>Wayland</td>
+                        <td>3:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>December 5, 2024</td>
+                        <td>vs. Bedford</td>
+                        <td>Wayland</td>
+                        <td>4:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>December 19, 2024</td>
+                        <td>@Weston</td>
+                        <td>Weston</td>
+                        <td>All Day</td>
+                    </tr>
+                    <tr>
+                        <td>January 3, 2025</td>
+                        <td>@Lincoln Sudbury</td>
+                        <td>Atkinson Pool</td>
+                        <td>3:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>January 8, 2025</td>
+                        <td>vs. Boston Latin</td>
+                        <td>Wayland</td>
+                        <td>3:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>January 11, 2025</td>
+                        <td>vs. Dover-Sherborne vs. Dana Hall</td>
+                        <td>Wayland</td>
+                        <td>4:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>January 15, 2025</td>
+                        <td>@Newton South</td>
+                        <td>Newton South HS</td>
+                        <td>4:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>January 20, 2025</td>
+                        <td>vs. Framingham vs. Waltham</td>
+                        <td>Wayland</td>
+                        <td>3:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>February 1, 2025</td>
+                        <td>DCL Championships</td>
+                        <td>Beede Center</td>
+                        <td>4:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>February 9, 2025</td>
+                        <td>MIAA North Sectionals</td>
+                        <td>MIT</td>
+                        <td>All Day</td>
+                    </tr>
+                    <tr>
+                        <td>February 22, 2025</td>
+                        <td>MIAA Division II State Championships</td>
+                        <td>State University Natatorium</td>
+                        <td>TBD</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>Important Dates</h2>
+            <ul style="margin-left: 20px; color: white;">
+                <li><strong>Team Registration:</strong> November 18, 2024</li>
+                <li><strong>Team Photo Day:</strong> December 10, 2024</li>
+                <li><strong>End of Season Banquet:</strong> March 10, 2025</li>
+            </ul>
+        </div>
+        
+<!-- Replace the existing records div with this updated version -->
+<div id="records" class="page hidden">
+    <h1>Team Records</h1>
+    
+    <!-- Toggle buttons for gender -->
+    <div class="toggle-container">
+        <button class="toggle-btn active" data-filter="boys">Boys</button>
+        <button class="toggle-btn" data-filter="girls">Girls</button>
+    </div>
+    <br>
+    <!-- Toggle buttons for level -->
+    <div class="toggle-container">
+        <button class="toggle-btn active" data-filter="varsity">Varsity</button>
+        <button class="toggle-btn" data-filter="freshman">Freshman</button>
+    </div>
+    
+    <!-- Boys Varsity Swim Records -->
+    <div class="record-table boys varsity">
+        <h2>Boys Varsity Swim Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Athlete</th>
+                    <th>Time/Score</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200 Medley Relay</td>
+                    <td>Kevin Jia, Alex Lu, Lebron James, Alex Lu</td>
+                    <td>1:35.45</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>200 Freestyle</td>
+                    <td>Matthew Tan</td>
+                    <td>1:38.22</td>
+                    <td>2020</td>
+                </tr>
+                <tr>
+                    <td>200 Individual Medley</td>
+                    <td>Alex Lu</td>
+                    <td>1:50.18</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>50 Freestyle</td>
+                    <td>Alex Lu</td>
+                    <td>21.76</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td>100 Butterfly</td>
+                    <td>Alex Lu</td>
+                    <td>53.85</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>500 Freestyle</td>
+                    <td>Matthew Tan</td>
+                    <td>4:40.33</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td>200 Freestyle Relay</td>
+                    <td>Alex Lu, David Ryu, Kevin Jia, Lebron James</td>
+                    <td>1:28.42</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>100 Backstroke</td>
+                    <td>Kevin Jia</td>
+                    <td>54.29</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td>100 Breaststroke</td>
+                    <td>David Ryu</td>
+                    <td>59.12</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>400 Freestyle Relay</td>
+                    <td>Alex Lu, Alex Lu, Alex Lu, Alex Lu</td>
+                    <td>3:26.87</td>
+                    <td>2024</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Boys Freshman Swim Records -->
+    <div class="record-table boys freshman hidden">
+        <h2>Boys Freshman Swim Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Athlete</th>
+                    <th>Time/Score</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200 Medley Relay</td>
+                    <td>Kevin Jia, Alex Lu, Lebron James, Alex Lu</td>
+                    <td>1:42.35</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>200 Freestyle</td>
+                    <td>Matthew Tan</td>
+                    <td>1:45.62</td>
+                    <td>2020</td>
+                </tr>
+                <tr>
+                    <td>200 Individual Medley</td>
+                    <td>Alex Lu</td>
+                    <td>1:57.28</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>50 Freestyle</td>
+                    <td>Alex Lu</td>
+                    <td>22.54</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td>100 Butterfly</td>
+                    <td>Alex Lu</td>
+                    <td>56.45</td>
+                    <td>2021</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Girls Varsity Swim Records -->
+    <div class="record-table girls varsity hidden">
+        <h2>Girls Varsity Swim Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Athlete</th>
+                    <th>Time/Score</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200 Medley Relay</td>
+                    <td>Alex Lu, Alex Lu, Alex Lu, Alex Lu</td>
+                    <td>1:45.76</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>200 Freestyle</td>
+                    <td>Alex Lu</td>
+                    <td>1:53.76</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>200 Individual Medley</td>
+                    <td>Alex Lu</td>
+                    <td>2:01.48</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>50 Freestyle</td>
+                    <td>Alex Lu</td>
+                    <td>23.31</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>100 Butterfly</td>
+                    <td>Alex Lu</td>
+                    <td>56.19</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>100 Freestyle</td>
+                    <td>Alex Lu</td>
+                    <td>52.42</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>500 Freestyle</td>
+                    <td>Alex Lu</td>
+                    <td>5:01.21</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>200 Freestyle Relay</td>
+                    <td>Alex Lu, Alex Lu, Alex Lu, Alex Lu</td>
+                    <td>1:35.89</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>100 Backstroke</td>
+                    <td>Alex Lu</td>
+                    <td>59.73</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>100 Breaststroke</td>
+                    <td>Alex Lu</td>
+                    <td>1:03.25</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>400 Freestyle Relay</td>
+                    <td>Alex Lu, Alex Lu, Alex Lu, Alex Lu</td>
+                    <td>3:45.42</td>
+                    <td>2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Girls Freshman Swim Records -->
+    <div class="record-table girls freshman hidden">
+        <h2>Girls Freshman Swim Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Athlete</th>
+                    <th>Time/Score</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>200 Medley Relay</td>
+                    <td>Alex Lu, Alex Lu, Alex Lu, Alex Lu</td>
+                    <td>1:52.76</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>200 Freestyle</td>
+                    <td>Alex Lu</td>
+                    <td>1:58.76</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>200 Individual Medley</td>
+                    <td>Alex Lu</td>
+                    <td>2:08.48</td>
+                    <td>2025</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Diving Records -->
+    <div class="record-table diving">
+        <h2>Diving Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Athlete</th>
+                    <th>Score</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Boys 1-meter (6 dives)</td>
+                    <td>Nathan Oh</td>
+                    <td>351.45</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>Boys 1-meter (11 dives)</td>
+                    <td>Nathan Oh</td>
+                    <td>525.20</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>Girls 1-meter (6 dives)</td>
+                    <td>Nathan Oh</td>
+                    <td>372.55</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>Girls 1-meter (11 dives)</td>
+                    <td>Nathan Oh</td>
+                    <td>557.60</td>
+                    <td>2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+        
+        <!-- Athletes Login Page -->
+        <div id="athletes-login" class="page hidden">
+            <h1>For Athletes</h1>
+            <div class="password-form">
+                <h2>Password Required</h2>
+                <p>In order to proceed and gain access exclusive pictures of Alexander Lu, you must enter the password.</p>
+                <input type="password" id="password-input" placeholder="Enter password">
+                <button onclick="checkPassword()">Submit</button>
+                <p id="password-error" style="color: red; display: none;">WRONG (try again)</p>
+            </div>
+        </div>
+        
+        <!-- Athletes Page (Hidden) -->
+        <div id="athletes" class="page hidden">
+            <a href = "#2024-pentathlon">
+                <h2>2023-2024 Pentathlon</h2>
+            </a>
+            <a href = "#2023-pentathlon">
+                <h2>2022-2023 Pentathlon</h2>
+            </a>
+            <div id = "2024-pentathlon">
+                <h1>2023-2024 Pentathlon</h1>
+                <div class="flourish-embed flourish-radar" data-src="visualisation/16833431"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/16833431/thumbnail" width="100%" alt="radar visualization" /></noscript></div>
+            </div>
+            <div id = "2023-pentathlon">
+                <h1>2022-2023 Pentathlon</h1>
+                <div class="flourish-embed flourish-radar" data-src="visualisation/16902098"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/16902098/thumbnail" width="100%" alt="radar visualization" /></noscript></div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+
+        <p>Wayland Swim and Dive Team | 258 Old Connecticut Path, Wayland, MA 01778</p>
+        <p>Contact: Coach Foley | Email: youngfols92@gmail.com  | Phone: (123) 456-7890</p>
+        <p>&copy; 2025 Wayland Swim and Dive. All rights reserved.</p>
+
+    </footer>
+    
+    <script>
+        // Display home page by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('home');
+        });
+        
+        // Function to show a specific page
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // Show the selected page
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.remove('hidden');
+            }
+        }
+        
+        // Function to check password
+        function checkPassword() {
+            const passwordInput = document.getElementById('password-input').value;
+            const passwordError = document.getElementById('password-error');
+            
+            // The secret password is hard-coded here
+            if (passwordInput === "alexlu") {
+                showPage('athletes');
+                passwordError.style.display = 'none';
+            } else {
+                passwordError.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
